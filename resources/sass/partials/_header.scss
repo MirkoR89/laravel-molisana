@@ -1,0 +1,33 @@
+header {
+
+    .logo {
+        margin: 20px 0;
+    }
+    
+    nav {
+        background-color: $pri-color;
+        height: 80px;
+        
+        li {
+            display: inline;
+            list-style-type: none;
+            margin: 0 5px;
+
+            a {
+               text-transform: uppercase;
+               text-decoration: none;
+               font-weight: 700;
+               font-size: 20px;
+               
+               &:visited {
+                color: white;
+               }
+
+               &:hover {
+                color: $sec-color;
+                border-bottom: 6px solid $sec-color;
+               }
+            }
+        }
+    }
+}
