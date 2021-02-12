@@ -4,6 +4,4 @@
     Contacts   
 @endsection
 
-@include('products_main')
-
 

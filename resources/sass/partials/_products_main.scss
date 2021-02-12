@@ -1,0 +1,11 @@
+.pasta {
+    background-image: url('../../../public/img/fondo-pag-speciali.jpg');
+    background-size: cover;
+    
+    .pasta_card {
+        img {
+            width: 350px;
+            margin: 10px;
+        }
+    }
+}
