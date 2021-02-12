@@ -2,22 +2,37 @@
     <section class="pasta">
         <div class="container">
             <div class="pasta_card d-flex flex-wrap">
+                <div class="pasta_title">
+                    <h2></h2>
+                </div>
                 @foreach ($data as $pasta)
                     @if ($pasta['tipo'] == 'lunga')
-                        <div class="pasta_title">
-                        
+                        <div>   
+                            <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
+                            <div class="hover_card">
+                                <span>{{ $pasta['titolo'] }}</span>
+                                <p>{{ $pasta['descrizione'] }}</p>
+                                <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
+                            </div>
                         </div>
-                        <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
                     @elseif ($pasta['tipo'] == 'corta')    
-                        <div class="pasta_title">
-                            
+                        <div>
+                            <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
+                            <div class="hover_card">
+                                <span>{{ $pasta['titolo'] }}</span>
+                                <p>{{ $pasta['descrizione'] }}</p>
+                                <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
+                            </div>
                         </div>
-                        <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
                     @else
-                        <div class="pasta_title">
-                            
+                        <div>
+                            <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">     
+                            <div class="hover_card">
+                                <span>{{ $pasta['titolo'] }}</span>
+                                <p>{{ $pasta['descrizione'] }}</p>
+                                <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
+                            </div>
                         </div>
-                        <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">     
                     @endif
                 @endforeach
             </div>

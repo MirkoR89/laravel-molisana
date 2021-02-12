@@ -82,3 +82,25 @@ header nav li a:hover {
   margin: 10px;
 }
 
+.pasta .pasta_card .hover_card {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 350px;
+  height: 210px;
+  padding: 5px;
+  margin: 10px;
+  position: absolute;
+  transform: translateY(-234px);
+}
+
+.pasta .pasta_card .hover_card:hover {
+  display: block;
+}
+
+.pasta .pasta_card .hover_card p {
+  height: 80px;
+  overflow-y: scroll;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
