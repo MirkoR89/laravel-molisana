@@ -17,6 +17,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.active {
+  color: #012d76 !important;
+  border-bottom: 6px solid #012d76;
+}
+
 .d-flex {
   display: flex;
 }

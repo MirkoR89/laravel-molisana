@@ -18,6 +18,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.active {
+    color: $sec-color!important;
+    border-bottom: 6px solid $sec-color;
+}
+
 // Flexbox
 .d-flex {
     display: flex;
