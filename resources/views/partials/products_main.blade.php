@@ -2,38 +2,50 @@
     <section class="pasta">
         <div class="container">
             <div class="pasta_card d-flex flex-wrap">
+                @foreach ($data as $key => $pasta)
+                @if ($pasta['tipo'] == 'lunga')
+                @if ($loop->first)
                 <div class="pasta_title">
-                    <h2></h2>
+                    <h2>le lunghe</h2>
                 </div>
-                @foreach ($data as $pasta)
-                    @if ($pasta['tipo'] == 'lunga')
-                        <div>   
-                            <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
-                            <div class="hover_card">
-                                <span>{{ $pasta['titolo'] }}</span>
-                                <p>{{ $pasta['descrizione'] }}</p>
-                                <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
-                            </div>
-                        </div>
-                    @elseif ($pasta['tipo'] == 'corta')    
-                        <div>
-                            <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
-                            <div class="hover_card">
-                                <span>{{ $pasta['titolo'] }}</span>
-                                <p>{{ $pasta['descrizione'] }}</p>
-                                <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
-                            </div>
-                        </div>
-                    @else
-                        <div>
-                            <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">     
-                            <div class="hover_card">
-                                <span>{{ $pasta['titolo'] }}</span>
-                                <p>{{ $pasta['descrizione'] }}</p>
-                                <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
-                            </div>
-                        </div>
-                    @endif
+                @endif
+                <div class="info_card">
+                    <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
+                    <div class="hover_card text-center">
+                        <h3>{{ $pasta['titolo'] }}</h3>
+                        <p>{{ $pasta['descrizione'] }}</p>
+                        <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
+                    </div>
+                </div>
+                @elseif ($pasta['tipo'] == 'corta')
+                @if ($pasta['tipo'] == 'corta' && $pasta['titolo'] == 'N.38 Mezze maniche' )
+                <div class="pasta_title">
+                    <h2>le corte</h2>
+                </div>
+                @endif
+                <div>
+                    <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
+                    <div class="hover_card text-center">
+                        <h3>{{ $pasta['titolo'] }}</h3>
+                        <p>{{ $pasta['descrizione'] }}</p>
+                        <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
+                    </div>
+                </div>
+                @else
+                @if ($loop->last)
+                <div class="pasta_title">
+                    <h2>le cortissime</h2>
+                </div>
+                @endif
+                <div>
+                    <img src=" {{ $pasta['src'] }} " alt="picture of pasta type">
+                    <div class="hover_card text-center">
+                        <h3>{{ $pasta['titolo'] }}</h3>
+                        <p>{{ $pasta['descrizione'] }}</p>
+                        <span>Tempo di cottura: {{ $pasta['cottura'] }}</span>
+                    </div>
+                </div>
+                @endif
                 @endforeach
             </div>
         </div>

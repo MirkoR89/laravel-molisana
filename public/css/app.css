@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -77,14 +81,24 @@ header nav li a:hover {
   background-size: cover;
 }
 
+.pasta .pasta_card h2 {
+  width: 1070px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #012d76;
+  font-size: 35px;
+  text-shadow: 2px 2px 3px white;
+  margin: 30px 0;
+}
+
 .pasta .pasta_card img {
   width: 350px;
   margin: 10px;
 }
 
 .pasta .pasta_card .hover_card {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
   width: 350px;
   height: 210px;
   padding: 5px;
@@ -94,13 +108,20 @@ header nav li a:hover {
 }
 
 .pasta .pasta_card .hover_card:hover {
-  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.pasta .pasta_card .hover_card h3 {
+  font-weight: 900;
+  margin-top: 20px;
 }
 
 .pasta .pasta_card .hover_card p {
   height: 80px;
-  overflow-y: scroll;
+  overflow-y: hidden;
   font-size: 14px;
+  font-weight: 100;
   margin: 20px 0;
 }
 

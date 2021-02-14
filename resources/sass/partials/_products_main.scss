@@ -4,14 +4,24 @@
     
     .pasta_card {
 
+        h2 {
+            width: 1070px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $sec-color;
+            font-size: 35px;
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 1);
+            margin: 30px 0;
+        }
+
         img {
             width: 350px;
             margin: 10px;
         }
 
         .hover_card {
-            background-color: rgb(0, 0, 0, 0.5);
-            color: white;
+            background-color: rgb(0, 0, 0, 0.0);
+            color: rgb(0, 0, 0, 0.0);
             width: 350px;
             height: 210px;
             padding: 5px;
@@ -20,18 +30,23 @@
             transform: translateY(-234px);
 
             &:hover {
-                display: block;
+                background-color: rgb(0, 0, 0, 0.5);
+                color: white;
             }
-        
-            
+
+            h3 {
+                font-weight: 900;
+                margin-top: 20px;
+            }
             
             p {
                 height: 80px;
-                overflow-y: scroll;
+                overflow-y: hidden;
                 font-size: 14px;
+                font-weight: 100;
                 margin: 20px 0;
             }
-            
+
         }
 
     }
