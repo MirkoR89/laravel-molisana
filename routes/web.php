@@ -15,16 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {     
-    return view('home');
+    return view('pages.home');
 })->name('home');
 
 Route::get('products', function () {
 
     $data = json_decode(config('data.data'), true);
 
-    return view('layouts.products', compact('data'));
+    return view('pages.products', compact('data'));
 })->name('products');
 
 Route::get('contacts', function () {     
-    return view('layouts.contacts');
+    return view('pages.contacts');
 })->name('contacts');

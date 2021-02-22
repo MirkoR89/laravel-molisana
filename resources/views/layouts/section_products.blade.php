@@ -1,3 +1,4 @@
+@section('main')
 <main>
     <section class="pasta">
         <div class="container">
@@ -51,3 +52,4 @@
         </div>
     </section>
 </main>
+@endsection
